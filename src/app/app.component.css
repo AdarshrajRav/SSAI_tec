@@ -25,6 +25,7 @@ p {
 }
 
 .toolbar {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -41,21 +42,6 @@ p {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
-}
-
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
-}
-
 .content {
   display: flex;
   margin: 82px auto 32px;
@@ -63,6 +49,21 @@ p {
   max-width: 960px;
   flex-direction: column;
   align-items: center;
+}
+
+.data-card {
+  width: 90%;
+  height: 2cm;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.data-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 svg.material-icons {
