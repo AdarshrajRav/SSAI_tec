@@ -15,6 +15,7 @@
 .toolbar img {
   margin: 0 16px;
 }
+
 .content {
   padding-top: 2cm;
   display: flex;
@@ -30,51 +31,54 @@
   justify-content: center;
   align-items: center;
 }
+
 .data-card {
   min-width: 40%;
 }
+
 .weather {
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-	display: flex;
-	max-width: 100%;
-	margin: 20px;
-	overflow: hidden;
-	width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 90%;
 }
 
 .weather h6 {
-	opacity: 0.6;
-	margin: 0;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  opacity: 0.6;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .weather h2 {
-	letter-spacing: 1px;
-	margin: 10px 0;
+  letter-spacing: 1px;
+  margin: 10px 0;
 }
 
 .weather-date {
-	background-color: #065aae;
-	color: #fff;
-	padding: 20px;
-	max-width: 250px;
+  background-color: #065aae;
+  color: #fff;
+  padding: 20px;
+  max-width: 250px;
   min-width: 40%;
 }
 
 .weather-date a {
-	color: #fff;
-	display: inline-block;
-	opacity: 0.6;
-	text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  opacity: 0.6;
+  text-decoration: none;
 }
+
 .weather-date i {
-	color: rgb(255, 0, 0);
-	display: inline-block;
-	opacity: 0.6;
-	text-decoration: none;
+  color: rgb(255, 0, 0);
+  display: inline-block;
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 .weather-date input {
@@ -86,20 +90,23 @@
   color: #000000;
   border-style: hidden;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
-  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+  box-shadow: 0px 0px 5px rgba(103, 102, 104, .55);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .0);
 }
+
 .weather-info {
-	padding: 20px;
-	position: relative;
-	width: 100%;
+  padding: 20px;
+  position: relative;
+  width: 100%;
 }
+
 .weather-info a {
-	color: rgb(41, 36, 36);
-	display: inline-block;
-	opacity: 0.6;
-	text-decoration: none;
+  color: rgb(41, 36, 36);
+  display: inline-block;
+  opacity: 0.6;
+  text-decoration: none;
 }
+
 .weather-info input {
   padding: 5px;
   font-size: 15px;
@@ -110,32 +117,34 @@
   color: #000000;
   border-style: hidden;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
-  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+  box-shadow: 0px 0px 5px rgba(103, 102, 104, .55);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .0);
 }
 
 .user-input {
-	background-color: #b3d4f6;
-	border-radius: 10px;
-	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-	display: flex;
+  background-color: #b3d4f6;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
   flex-direction: column;
   flex-wrap: none;
   justify-content: left;
   align-items: left;
-	max-width: 350px;
-	margin: 20px;
-	overflow: hidden;
-	width: 90%;
+  max-width: 350px;
+  margin: 20px;
+  overflow: hidden;
+  width: 90%;
 }
+
 .user-input p {
   padding-left: 20px;
 }
+
 .user-input i {
-	color: rgb(202, 27, 27);
-	display: inline-block;
-	opacity: 0.6;
-	text-decoration: none;
+  color: rgb(202, 27, 27);
+  display: inline-block;
+  opacity: 0.6;
+  text-decoration: none;
 }
 
 .user-input input {
@@ -149,8 +158,8 @@
   color: #000000;
   border-style: hidden;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
-  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+  box-shadow: 0px 0px 5px rgba(103, 102, 104, .55);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .0);
 }
 
 .user-input select {
@@ -164,8 +173,8 @@
   color: #000000;
   border-style: hidden;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
-  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+  box-shadow: 0px 0px 5px rgba(103, 102, 104, .55);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .0);
 }
 
 .user-input select {
@@ -179,8 +188,8 @@
   color: #000000;
   border-style: hidden;
   border-radius: 12px;
-  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
-  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+  box-shadow: 0px 0px 5px rgba(103, 102, 104, .55);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, .0);
 }
 
 /* CSS Found For Button On https://getcssscan.com/css-buttons-examples With personal adjustments*/
@@ -191,13 +200,13 @@
   background-color: #fff;
   border-radius: 24px;
   border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
   height: 20px;
@@ -210,12 +219,12 @@
   position: relative;
   text-align: center;
   text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: auto;
-  will-change: transform,opacity;
+  will-change: transform, opacity;
   z-index: 0;
 }
 

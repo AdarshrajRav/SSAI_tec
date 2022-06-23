@@ -5,8 +5,12 @@
   <span>Welcome</span>
   <div class="spacer">
   </div>
-  <button class="button-17" (click)="form=!form; "><h4>New Entry</h4></button>
-  <button class="button-17" (click)="sortMenu=!sortMenu"><h4>Sort</h4></button>
+  <button class="button-17" (click)="form=!form; ">
+    <h4>New Entry</h4>
+  </button>
+  <button class="button-17" (click)="sortMenu=!sortMenu">
+    <h4>Sort</h4>
+  </button>
 </div>
 
 <div class="content" role="main">
@@ -17,14 +21,14 @@
       Date (year-month-day):
       <input type="text" [(ngModel)]="date" placeholder="ex: 2022-09-29" name="Date">
       <i *ngIf="!checkDate">
-      Date is not properly formatted. (format: yyyy-mm-dd)
+        Date is not properly formatted. (format: yyyy-mm-dd)
       </i>
     </p>
 
     <p>
       Time: <input type="text" [(ngModel)]="time" placeholder="ex: 01:30am" name="time">
       <i *ngIf="!checkTime">
-      Time is not properly formatted. (format: 01:00am/pm)
+        Time is not properly formatted. (format: 01:00am/pm)
       </i>
     </p>
 
@@ -55,7 +59,7 @@
         </option>
       </select>
       <i *ngIf="!selectSort">
-      Please select what you want to sort by.
+        Please select what you want to sort by.
       </i>
     </p>
     <div *ngIf="order">
@@ -118,12 +122,5 @@
     </div>
   </div>
 </div>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
