@@ -5,84 +5,119 @@
   <span>Welcome</span>
   <div class="spacer">
   </div>
-  <button (click)="form=true">New Entry</button>
-  <button (click)="sortMenu=true">Sort</button>
+  <button class="button-17" (click)="form=!form; "><h4>New Entry</h4></button>
+  <button class="button-17" (click)="sortMenu=!sortMenu"><h4>Sort</h4></button>
 </div>
 
 <div class="content" role="main">
   <!-- Buttons -->
+  <!-- User input form -->
+  <div class="user-input" *ngIf="form">
+    <p>
+      Date (year-month-day):
+      <input type="text" [(ngModel)]="date" placeholder="ex: 2022-09-29" name="Date">
+      <i *ngIf="!checkDate">
+      Date is not properly formatted. (format: yyyy-mm-dd)
+      </i>
+    </p>
+
+    <p>
+      Time: <input type="text" [(ngModel)]="time" placeholder="ex: 01:30am" name="time">
+      <i *ngIf="!checkTime">
+      Time is not properly formatted. (format: 01:00am/pm)
+      </i>
+    </p>
+
+    <p>
+      Temperature:
+      <input type="number" [(ngModel)]="temp" name="Temperature">
+      ºF
+    </p>
+    <p>
+      Wind Speed:
+      <input type="number" [(ngModel)]="wind" name="Wind speed">
+      MPH
+    </p>
+    <footer>
+      <button class="card card-small" type="submit" (click)="submit()">Submit</button>
+      <button class="card card-small" type="cancel" (click)="form=false; resetVal()">Cancel</button>
+    </footer>
+  </div>
 
   <!-- Sort -->
-  <div *ngIf="sortMenu">
+  <div class="user-input" *ngIf="sortMenu">
     <p>
       Sort By:
       <select [(ngModel)]="sort" name="sort">
+        <option value="" disabled selected>Select your option</option>
         <option *ngFor="let o of sortBy">
           {{o}}
         </option>
       </select>
-    </p>
-    <p *ngIf="!selectSort">
+      <i *ngIf="!selectSort">
       Please select what you want to sort by.
+      </i>
     </p>
     <div *ngIf="order">
-      <button (click)="order= !order">Sort By Ascending Order</button>
+      <button class="button-17" (click)="order= !order">Sort By Ascending Order ↓</button>
     </div>
     <div *ngIf="!order">
-      <button (click)="order= !order">Sort By Descending Order</button>
+      <button class="button-17" (click)="order= !order">Sort By Descending Order ↑</button>
     </div>
     <footer>
       <button class="card card-small" (click)="submitSort()">Sort Data</button>
       <button class="card card-small" (click)="sortMenu=false">Close Sort Menu</button>
     </footer>
   </div>
-  <!-- Data Card -->
-  <h3 class="p-3 text-center">Angular - Display a list of items with ngFor</h3>
-  <div *ngIf="!form">
-    <table>
-      <tr *ngFor="let data of data">
-        <div class="data-card">
-          <td>Date: {{data.date}}</td>
-          <td>Time: {{data.time}}</td>
-          <td>Temperature: {{data.temp}}</td>
-          <td>Wind: {{data.wind}}</td>
-        </div>
-      </tr>
-    </table>
-  </div>
-  <!-- User input form -->
 
-  <div *ngIf="form">
-      <p>
-        Date (format: yyyy-mm-dd):
-        <input type="text" [(ngModel)]="date" name="Date">
-      </p>
-      <p *ngIf="!checkDate">
-        Time is not properly formatted.
-      </p>
-      <p>
-        Time (format: 01:00am/pm): <input type="text" [(ngModel)]="time" name="time">
-      </p>
-      <p *ngIf="!checkTime">
-        Time is not properly formatted
-      </p>
-      <p>
-        Temperature:
-        <input type="number" [(ngModel)]="temp" name="Temperature">
-        ºF
-      </p>
-      <p>
-        Wind Speed:
-        <input type="number" [(ngModel)]="wind" name="Wind speed">
-        MPH
-      </p>
-      <footer>
-        <button class="card card-small" type="submit" (click)="submit()">Submit</button>
-        <button class="card card-small" type="cancel" (click)="form=false">Cancel</button>
-      </footer>
+  <!-- Data card -->
+  <h3>Weather Data</h3>
+  <div class="weather-container">
+    <div class="data-card" *ngFor="let data of data; let i= index">
+      <div class="weather" *ngIf="!data.edit">
+        <div class="weather-date">
+          <h6>Date</h6>
+          <h3>{{data.date}}</h3>
+          <br>
+          <h6>Time</h6>
+          <h3>{{data.time}}</h3>
+          <a (click)="delete(i)">Delete</a>
+        </div>
+        <div class="weather-info">
+          <h6>Temperature</h6>
+          <h2>{{data.temp}}ºF</h2>
+          <h6>wind Speed</h6>
+          <h2>{{data.wind}} MPH</h2>
+          <a (click)="editPrep(i)">Edit</a>
+        </div>
+      </div>
+      <!-- editable version -->
+      <div class="weather" *ngIf="data.edit">
+        <div class="weather-date">
+          <h6>Date</h6>
+          <h3><input type="text" id="editDate" [(ngModel)]="editDate" maxlength="10" size="10"></h3>
+          <i *ngIf="!checkEditDate">
+            Date is not properly formatted. (format: yyyy-mm-dd)
+          </i>
+          <br>
+          <h6>Time</h6>
+          <h3><input type="text" id="editTime" [(ngModel)]="editTime" maxlength="6" size="10"></h3>
+          <i *ngIf="!checkEditTime">
+            Time is not properly formatted. (format: 01:00am/pm)
+          </i>
+          <a (click)="data.edit=false; resetEditVal()">Cancel</a>
+        </div>
+        <div class="weather-info">
+          <h6>Temperature</h6>
+          <h3><input type="number" id="editTemperature" [(ngModel)]="editTemp">ºF</h3>
+          <h6>wind Speed</h6>
+          <h3> <input type="number" id="editWindSpeed" [(ngModel)]="editWind"> MPH</h3>
+          <a (click)="submitEdit(i)">Submit</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->

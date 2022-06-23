@@ -1,3 +1,234 @@
+.toolbar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #065aae;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+.content {
+  padding-top: 2cm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.data-card {
+  min-width: 40%;
+}
+.weather {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 90%;
+}
+
+.weather h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.weather h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.weather-date {
+	background-color: #065aae;
+	color: #fff;
+	padding: 20px;
+	max-width: 250px;
+  min-width: 40%;
+}
+
+.weather-date a {
+	color: #fff;
+	display: inline-block;
+	opacity: 0.6;
+	text-decoration: none;
+}
+.weather-date i {
+	color: rgb(255, 0, 0);
+	display: inline-block;
+	opacity: 0.6;
+	text-decoration: none;
+}
+
+.weather-date input {
+  padding: 5px;
+  font-size: 15px;
+  border-width: 1px;
+  border-color: #efb7f2;
+  background-color: #f4f4f4;
+  color: #000000;
+  border-style: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
+  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+}
+.weather-info {
+	padding: 20px;
+	position: relative;
+	width: 100%;
+}
+.weather-info a {
+	color: rgb(41, 36, 36);
+	display: inline-block;
+	opacity: 0.6;
+	text-decoration: none;
+}
+.weather-info input {
+  padding: 5px;
+  font-size: 15px;
+  width: 50px;
+  border-width: 1px;
+  border-color: #efb7f2;
+  background-color: #b3d4f6;
+  color: #000000;
+  border-style: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
+  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+}
+
+.user-input {
+	background-color: #b3d4f6;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+  flex-direction: column;
+  flex-wrap: none;
+  justify-content: left;
+  align-items: left;
+	max-width: 350px;
+	margin: 20px;
+	overflow: hidden;
+	width: 90%;
+}
+.user-input p {
+  padding-left: 20px;
+}
+.user-input i {
+	color: rgb(202, 27, 27);
+	display: inline-block;
+	opacity: 0.6;
+	text-decoration: none;
+}
+
+.user-input input {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-width: 1px;
+  width: 100px;
+  border-color: #efb7f2;
+  background-color: #f4f4f4;
+  color: #000000;
+  border-style: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
+  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+}
+
+.user-input select {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-width: 1px;
+  width: 100px;
+  border-color: #efb7f2;
+  background-color: #f4f4f4;
+  color: #000000;
+  border-style: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
+  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+}
+
+.user-input select {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-width: 1px;
+  width: 150px;
+  border-color: #efb7f2;
+  background-color: #f4f4f4;
+  color: #000000;
+  border-style: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(103,102,104,.55);
+  text-shadow: 0px 0px 0px rgba(255,255,255,.0);
+}
+
+/* CSS Found For Button On https://getcssscan.com/css-buttons-examples With personal adjustments*/
+.button-17 {
+  margin: 15px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  height: 20px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+/* End of copied css */
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -24,75 +255,13 @@ p {
   flex: 1;
 }
 
-.toolbar {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-}
-
-.toolbar img {
-  margin: 0 16px;
-}
-
-.content {
-  display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.data-card {
-  width: 90%;
-  height: 2cm;
-  margin: auto;
-  margin-top: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.data-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
-}
-
-.card svg.material-icons path {
-  fill: #888;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 16px;
-}
-
 .card {
   all: unset;
   border-radius: 4px;
   border: 1px solid #eee;
   background-color: #fafafa;
   height: 40px;
-  width: 200px;
+  width: 100%;
   margin: 0 8px 16px;
   padding: 16px;
   display: flex;
@@ -103,119 +272,10 @@ svg.material-icons:not(:last-child) {
   line-height: 24px;
 }
 
-.card-container .card:not(:last-child) {
-  margin-right: 0;
-}
 
 .card.card-small {
   height: 16px;
-  width: 168px;
-}
-
-.card-container .card:not(.highlight-card) {
-  cursor: pointer;
-}
-
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
-
-.card-container .card:not(.highlight-card):hover .material-icons path {
-  fill: rgb(105, 103, 103);
-}
-
-.card.highlight-card {
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-  border: none;
-  width: auto;
-  min-width: 30%;
-  position: relative;
-}
-
-.card.card.highlight-card span {
-  margin-left: 60px;
-}
-
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
-
-svg#rocket-smoke {
-  height: calc(100vh - 95px);
-  position: absolute;
-  top: 10px;
-  right: 180px;
-  z-index: -10;
-}
-
-a,
-a:visited,
-a:hover {
-  color: #1976d2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #125699;
-}
-
-.terminal {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 6px;
-  padding-top: 45px;
-  margin-top: 8px;
-  overflow: hidden;
-  background-color: rgb(15, 15, 16);
-}
-
-.terminal::before {
-  content: "\2022 \2022 \2022";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: rgb(58, 58, 58);
-  color: #c2c3c4;
-  width: 100%;
-  font-size: 2rem;
-  line-height: 0;
-  padding: 14px 0;
-  text-indent: 4px;
-}
-
-.terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  color: white;
-  padding: 0 1rem 1rem;
-  margin: 0;
-}
-
-.circle-link {
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
-  margin: 8px;
-  background-color: white;
-  border: 1px solid #eeeeee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: 1s ease-out;
-}
-
-.circle-link:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
 }
 
 footer {
@@ -223,71 +283,5 @@ footer {
   display: flex;
   align-items: center;
   line-height: 20px;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
-}
-
-.github-star-badge {
-  color: #24292e;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  padding: 3px 10px;
-  border: 1px solid rgba(27,31,35,.2);
-  border-radius: 3px;
-  background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-  margin-left: 4px;
-  font-weight: 600;
-}
-
-.github-star-badge:hover {
-  background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-  border-color: rgba(27,31,35,.35);
-  background-position: -.5em;
-}
-
-.github-star-badge .material-icons {
-  height: 16px;
-  width: 16px;
-  margin-right: 4px;
-}
-
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link) ,
-  .terminal {
-    width: 30%;
-  }
-
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
-  }
-
-  .card.highlight-card span {
-    margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
-}
-
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
-  }
+  width: 100%;
 }
